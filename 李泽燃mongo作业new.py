@@ -9,22 +9,22 @@ while 1:
 
 	chose=input('1:search;2:add;3:dele;4update;5:type other you will quit:')
 	if chose =='1':
-		search1('search by:1:name;2:phone;3:exp')
+		search1=input('search by:1:name;2:phone;3:exp')
 		if search1=='1':
 			search=input('name?')
 			searchname=db.xiyouji.find({'name':search},{'_id':0})
-		for i in searchname:
-			print(i)
-		if search1=='2':
-                	search=input('phone?')
-                	searchphone=db.xiyouji.find({'phone':search},{'_id':0})
-		for i in searchphone:
-			print(i)
-		if search1=='3':
-                	search=input('exp?')
-               		searchexp=db.xiyouji.find({'exp':search},{'_id':0})
-		for i in searchexp:
-			print(i)
+			for i in searchname:
+				print(i)
+		elif search1=='2':
+			search=input('phone?')
+			searchphone=db.xiyouji.find({'phone':search},{'_id':0})
+			for i in searchphone:
+				print(i)
+		elif search1=='3':
+			search=input('exp?')
+			searchexp=db.xiyouji.find({'exp':search},{'_id':0})
+			for i in searchexp:
+				print(i)
 	elif chose=='2':
 		add=input('name?')
 		list1=[]
